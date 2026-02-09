@@ -1,0 +1,26 @@
+<div class="font-bold text-base my-4"> 
+    {{ label }}
+</div>
+
+<div class="mb-3">
+    <mat-radio-group
+    [formControl]="control">
+        <mat-radio-button [value]="option1?.value">
+            <div class="radio-content ">
+            <div class="circle"></div>
+            <div class="label">
+                {{ option1?.label}}
+            </div>
+            </div>
+        </mat-radio-button>
+
+        <mat-radio-button [value]="option2?.value" style="margin-left: 20px;">
+            <div class="radio-content">
+            <div class="circle"></div>
+            <div class="label">
+                {{ option2?.label}}
+            </div>
+            </div>
+        </mat-radio-button>
+    </mat-radio-group>
+</div>

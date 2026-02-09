@@ -69,48 +69,48 @@ export const RULES: FormRule[] = [
 ### In ts file `app.component.ts`
 
 ```ts
-    import { NgxFormRulesService } from 'ngx-form-rules';
-    import { RULES } from './checking-rules.config';
+	import { NgxFormRulesService } from 'ngx-form-rules';
+	import { RULES } from './checking-rules.config';
 
-    @Component({
-    selector: 'app-root',
-    templateUrl: './app.component.html',
-    styleUrls: ['./app.component.scss']
-    })
-    export class AppComponent implements OnInit{
-    
-    form: FormGroup;
-    private readonly FORM_RULES = RULES;
+	@Component({
+	selector: 'app-root',
+	templateUrl: './app.component.html',
+	styleUrls: ['./app.component.scss']
+	})
+	export class AppComponent implements OnInit{
+	
+	form: FormGroup;
+	private readonly FORM_RULES = RULES;
 
-    constructor(
-        private fb: FormBuilder,
-        private ruleEngine: NgxFormRulesService) {  
-        }
+	constructor(
+		private fb: FormBuilder,
+		private ruleEngine: NgxFormRulesService) {  
+		}
 
-    ngOnInit(): void {
-        this.form = this.fb.group({     
-        valueA: [''],
-        valueB: [''],
-        valueC: ['']
-        });
+	ngOnInit(): void {
+		this.form = this.fb.group({     
+		valueA: [''],
+		valueB: [''],
+		valueC: ['']
+		});
 
-        this.ruleEngine.applyRules(this.form, this.FORM_RULES); // Apply rules to the form    
-        // this.onLoadData();
-    }
-    /*
-    onLoadData(): void {
-        this.partThreeService.getPartThreeByUuId(this.id).subscribe(
-            (res) => {
-            if (res && res.id) {
-                this.form.patchValue(res);
-                this.ruleEngine.syncRulesWithCurrentValues(this.form, this.FORM_RULES);
-            }
-            this.isDataLoaded = true;},
-            (error) => { this.isDataLoaded = true; }
-        );
-    }
-    */
-    }
+		this.ruleEngine.applyRules(this.form, this.FORM_RULES); // Apply rules to the form    
+		// this.onLoadData();
+	}
+	/*
+	onLoadData(): void {
+		this.partThreeService.getPartThreeByUuId(this.id).subscribe(
+			(res) => {
+			if (res && res.id) {
+				this.form.patchValue(res);
+				this.ruleEngine.syncRulesWithCurrentValues(this.form, this.FORM_RULES);
+			}
+			this.isDataLoaded = true;},
+			(error) => { this.isDataLoaded = true; }
+		);
+	}
+	*/
+	}
 ```
 ### In html file `app.component.html`
 
@@ -123,22 +123,22 @@ export const RULES: FormRule[] = [
         <div class="font-bold mb-4">
             Availability, Quantity, Category of Land: Is the availability, the quantity, and the category of the land clearly stated?
         </div><br>        
-        <app-radio-field [control]="form.get('valueA')"
-            [label]="'a) Check the availability of information'"
-            [option1]="{ label: 'Information is available', value: true }"
-            [option2]="{ label: 'Information is not available (skip b and go to c)', value: false }">
-        </app-radio-field>
+		<app-radio-field [control]="form.get('valueA')"
+			[label]="'a) Check the availability of information'"
+			[option1]="{ label: 'Information is available', value: true }"
+			[option2]="{ label: 'Information is not available (skip b and go to c)', value: false }">
+		</app-radio-field>
         <br />     
-        <app-radio-field [control]="form.get('valueB')"
-            [label]="'b) Check the quality of information'"
-            [option1]="{ label: 'Appropriate as indicated', value: true }"
-            [option2]="{ label: 'Needs amendment', value: false }">
-        </app-radio-field>
-        <br />
-        <app-textarea-field
-            [label]="'c) Remarks and suggestions'"
-            [control]="form.get('valueC')">
-        </app-textarea-field>         
+		<app-radio-field [control]="form.get('valueB')"
+			[label]="'b) Check the quality of information'"
+			[option1]="{ label: 'Appropriate as indicated', value: true }"
+			[option2]="{ label: 'Needs amendment', value: false }">
+		</app-radio-field>
+		<br />
+		<app-textarea-field
+			[label]="'c) Remarks and suggestions'"
+			[control]="form.get('valueC')">
+		</app-textarea-field>         
     </div>    
 </form>
 ```
