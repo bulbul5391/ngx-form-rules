@@ -7,7 +7,7 @@
     <a href="https://www.linkedin.com/in/bulbulsarker/" target="_blank">
     <img alt="Linkedin Follow" src="https://bdprescription.com/npm-package/linkedins.svg">
   </a>
-</p>  
+</p>
 
 ## Form Design
 Easily enable and disable Angular reactive form fields using simple rules
@@ -43,7 +43,7 @@ npm i ngx-form-rules
 npm uninstall ngx-form-rules
 ```
 
-## 💞 How to User 💞
+## 💞 How to Use 💞
 
 ### Create a file `checking-rules.config.ts` or `checking-rules.ts`
 

@@ -1,6 +1,21 @@
 {
   "name": "ngx-form-rules",
-  "version": "1.2.0",
+  "version": "1.2.2",
+  "description": "Powerful rules engine for Angular Reactive Forms. Dynamically enable, disable, and control form fields using declarative rules without manual subscriptions.",
+  "keywords": [
+    "bl2",
+    "angular",
+    "reactive forms",
+    "form rules",
+    "dynamic forms",
+    "conditional forms",
+    "form control",
+    "ngx-form-rules",
+    "angular validation",
+    "declarative forms",
+    "form management",
+    "form utility"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/bulbul5391/ngx-form-rules.git"
